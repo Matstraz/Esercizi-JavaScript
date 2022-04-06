@@ -1,7 +1,5 @@
-function nicknameMap() {
-  for(let i=0; i<persons.length; i++){
-    return persons[i].name +'-'+ persons[i].age;
-  }
+function adultFilter(persons) {
+  // ...
 }
 
 const persons = [
@@ -17,6 +15,6 @@ const persons = [
   { name: 'Alice', age: 28 }
 ];
 
-const nicknames = nicknameMap();
+const adults = adultFilter(persons);
 console.log(persons);
-console.log(nicknames);
+console.log(adults);
