@@ -9,3 +9,8 @@ class Person {
 
 const developer = new Person(1, 'Mario', 'Rossi', 25);
 // Print developer as json object
+
+let jsonDeveloper = JSON.stringify(developer);
+
+console.log(developer)
+console.log(jsonDeveloper)
