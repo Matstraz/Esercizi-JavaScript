@@ -1,16 +1,16 @@
 class BankAccount{
-    constructor(initialFounds){
-        this.initialFounds = initialFounds
+    constructor(initialFunds){
+        this.initialFunds = initialFunds
     }
 
     deposit(add){
-        return this.initialFounds += add
+        return this.initialFunds += add
     }
     withdraw(subtract){
-        return this.initialFounds -= subtract
+        return this.initialFunds -= subtract
     }
     view(){
-        console.log(this.initialFounds) 
+        console.log(this.initialFunds) 
     }
 }
 
