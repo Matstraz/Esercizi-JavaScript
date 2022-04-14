@@ -1,5 +1,6 @@
 function calculateAverageAge(persons) {
-  // ...
+  let mapping = persons.map(item => item.age);
+  return mapping.reduce((sum, current) => sum + current, 0)/mapping.length
 }
 
 const persons = [
@@ -16,5 +17,4 @@ const persons = [
 ];
 
 const average = calculateAverageAge(persons);
-console.log(persons);
 console.log(average);
