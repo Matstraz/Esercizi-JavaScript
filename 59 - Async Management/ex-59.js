@@ -28,9 +28,15 @@ function fetchPersonById(id) {
         return resolve(JSON.stringify(person));
       }
 
-      return reject(`Person with id: ${id} doesn't exist`);
+      return reject(`person with id = ${id} doesn't exist`);
     }, 1000);
   });
 }
 
-// core here
+let promise = fetchPersonById(3)
+promise
+.then((obj) => {
+  return obj
+})
+.then((obj) => console.log(JSON.parse(obj)))
+.catch((e) => console.log('Error:',e))
