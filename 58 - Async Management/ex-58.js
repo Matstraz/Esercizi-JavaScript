@@ -22,7 +22,7 @@ const persons = [
 
 function fetchPersonById(id) {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {                                                  //Altre due possibile alternative funzionanti per soddisfare la condizione
+    setTimeout(() => {                                                  //Altre due possibili alternative funzionanti per soddisfare la condizione
       if(typeof persons.find(item => item.id === id) !== 'undefined'){  //1) if(Boolean(persons.find(item => item.id === id)) == true)
         resolve(persons.find(item => item.id === id))                   //2) if(persons.find(item => item.id === id))
       }else{
@@ -38,7 +38,7 @@ function fetchPersonById(id) {
       if(Boolean(persons.find(item => item.id === id)) == true){
         resolve(persons.find(item => item.id === id))
       }else{
-        reject(new Error('No names with this id'))
+        reject(new Error('no names with this id'))
       }
       }, 1000);
   });
@@ -54,4 +54,4 @@ fetchPersonById(1)
   return fetchPersonById(5)
 })
 .then((obj) => console.log(obj))
-.catch((err) => console.log('Error:', err));
+.catch((err) => console.log(err));
