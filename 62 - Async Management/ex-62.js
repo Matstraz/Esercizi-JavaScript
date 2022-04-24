@@ -41,11 +41,11 @@ fetchPersonById(2)
 
   let promise = fetchPersonById(2)
 
-
   async function withoutThen(){        //Versione sintetica. Non parsata e senza error catching.
     let jsonPerson = await promise;
     console.log(jsonPerson);
   }
+  
 
 async function withoutThen2(){         //Versione completa.
   let person2 = await promise
