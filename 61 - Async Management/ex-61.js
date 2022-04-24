@@ -34,4 +34,19 @@ const jobs = [
   }
 ];
 
-// core here
+function fetchPersonById(id){
+  return new Promise((resolve) => {
+    setTimeout(() => {resolve(persons.find(item => item.id === id).firstName)
+    },1000)
+  })
+}
+
+function fetchJobById(id){
+  return new Promise((resolve) => {
+    setTimeout(() => {resolve(jobs.find(item => item.id === id).jobTitle)
+    },500)
+  })
+}
+
+Promise.race([fetchPersonById(3), fetchJobById(3)])
+.then(console.log)
