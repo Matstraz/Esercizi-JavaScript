@@ -36,7 +36,7 @@ const jobs = [
 
 function fetchPersonById(id){
   return new Promise((resolve) => {
-    setTimeout(() => {resolve(persons.find(item => item.id === id).firstName)
+    setTimeout(() => {resolve(persons.find(item => item.id === id))
     },1000)
   })
 }
