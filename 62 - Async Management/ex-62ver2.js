@@ -45,7 +45,8 @@ const persons = [
     async function withoutThen(){
       try{        
         let jsonPerson = await promise;
-        console.log(JSON.parse(jsonPerson));
+        let person = await JSON.parse(jsonPerson);
+        console.log(person);
       }
       catch(e){
         console.log(e)
