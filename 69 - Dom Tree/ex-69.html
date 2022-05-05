@@ -21,19 +21,19 @@
 
 <script>
   let elId = document.getElementById('firstName');    //4 metodi equivalenti partendo da un id come selettore
-  let fName = elId.previousElementSibling.firstChild
+  let fName = elId.previousElementSibling.firstChild.textContent
   console.log(fName)
 
   let elId2 = document.getElementById('container');
-  let fName2 = elId2.firstElementChild.firstElementChild.firstElementChild.firstChild
+  let fName2 = elId2.firstElementChild.firstElementChild.firstElementChild.firstChild.textContent
   console.log(fName2)
 
   let elId3 = document.getElementById('container');
-  let fName3 = elId3.children[0].children[0].children[0].childNodes[0]
+  let fName3 = elId3.children[0].children[0].children[0].childNodes[0].textContent
   console.log(fName3)
 
   let elId4 = document.getElementById('container');
-  let fName4 = elId4.querySelector('label').firstChild
+  let fName4 = elId4.querySelector('label').firstChild.textContent
   console.log(fName4)
 </script>
 
