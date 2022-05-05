@@ -21,10 +21,10 @@
 
 <script>
 let elByClass= document.querySelector('.form-input')            //2 metodi equivalenti
-let fText = elByClass.previousElementSibling.firstChild
+let fText = elByClass.previousElementSibling.firstChild.textContent
 console.log(fText)
 
 let elByClass2= document.getElementsByClassName('form-input')
-let fText2 = elByClass2[0].previousElementSibling.firstChild
+let fText2 = elByClass2[0].previousElementSibling.firstChild.textContent
 console.log(fText2)
 </script>
