@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's List</h2>
+      <table id="person-table">
+        <tbody></tbody>
+      </table>
+      <button id="add-row">Add row</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  let newRow = document.getElementById('add-row')
+  let tabContent = document.querySelector('tbody')
+  
+  newRow.onclick = function addRow() {
+    tableRow = document.createElement('tr')
+    tableRow.innerHTML= '<th style="padding: 10px">firstName</th> <th style="padding: 10px">lastName</th> <th style="padding: 10px">age</th>'
+    tabContent.append(tableRow)
+  }
+</script>
