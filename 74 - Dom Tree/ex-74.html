@@ -1,0 +1,39 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  let formEl = document.getElementById('person-form')
+
+  window.onload = function initForm(){
+    const inputEl1 = document.createElement('input');
+    const inputEl2 = document.createElement('input');
+    const inputEl3 = document.createElement('input');
+    inputEl1.setAttribute('id', 'firstName');
+    inputEl1.setAttribute('placeholder', 'First Name');
+    inputEl2.setAttribute('id', 'lastName');
+    inputEl2.setAttribute('placeholder', 'Last Name');
+    inputEl3.setAttribute('id', 'age');
+    inputEl3.setAttribute('placeholder', 'Age');
+
+    formEl.prepend(inputEl1, inputEl2, inputEl3);
+  }
+
+  let buttonEl = document.querySelector('button')
+
+  buttonEl.onclick = function submitPersonForm(event){
+    event.preventDefault();
+    let person = {}
+    let inputs = document.querySelectorAll('input')
+    inputs.forEach((element, i) => (person[inputs[i].id] = inputs[i].value));
+    console.log(person)
+  }
+
+</script>
