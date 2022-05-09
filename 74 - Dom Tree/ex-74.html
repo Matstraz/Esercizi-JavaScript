@@ -16,11 +16,14 @@
     const inputEl1 = document.createElement('input');
     const inputEl2 = document.createElement('input');
     const inputEl3 = document.createElement('input');
-    inputEl1.setAttribute('id', 'firstName');
+    inputEl1.setAttribute('id', 'firstName');             //queste proprietà potrebbero essere aggiunte anche come 
+    inputEl1.setAttribute('type', 'text');                //inputEl1.id = 'firstname'; inputEl1.type = 'text'; ecc....
     inputEl1.setAttribute('placeholder', 'First Name');
     inputEl2.setAttribute('id', 'lastName');
+    inputEl2.setAttribute('type', 'text');
     inputEl2.setAttribute('placeholder', 'Last Name');
     inputEl3.setAttribute('id', 'age');
+    inputEl3.setAttribute('type', 'number');
     inputEl3.setAttribute('placeholder', 'Age');
 
     formEl.prepend(inputEl1, inputEl2, inputEl3);
