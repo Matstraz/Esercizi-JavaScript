@@ -8,18 +8,20 @@
 </html>
 
 <script>
-  let fetchButton = document.getElementById('fetch-post')                    //Non è chiarissimo cosa stampare a console/salvare sul LocalStorage;
-  fetchButton.onclick = function(){                                          //ho pensato di stampare/salvare il contenuto del Body, in quanto 
-    fetch('https://jsonplaceholder.typicode.com/posts/1')                    //nelle lezioni viene indicato come l'elemento più importante del response.
+  let fetchButton = document.getElementById('fetch-post')                   
+  fetchButton.onclick = function(){                                          
+    fetch('https://jsonplaceholder.typicode.com/posts/1')                    
     .then((response) => response.json())
-    .then((data) => console.log(data.body))
+    .then((data) => console.log(data))
   }
 
   let saveButton = document.getElementById('save-post')
 
-  saveButton.onclick = async function(){
+  saveButton.onclick = async function(){                                   
     let obj = await fetch('https://jsonplaceholder.typicode.com/posts/1')
     let data = await obj.json()
-    localStorage.setItem('BodyContentData', data.body)
-  }
+    localStorage.setItem('dataContentTitle', data.title)  //Provando ad aggiungere al localStorage direttamente "data"         
+    localStorage.setItem('dataContentData', data.body)    //il risultato presentato è [obect Object]; per questo motivo 
+  }                                                       //ho pensato di aggiungere separatamente title e body.
+  
 </script>
