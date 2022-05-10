@@ -11,5 +11,10 @@
 </html>
 
 <script>
-  // code here
+ let titleEl = document.getElementById('post-title')
+ let getFetch = document.getElementById('fetch-post')
+ let storagedItem = localStorage.getItem('dataContentTitle')
+ getFetch.onclick = function(){
+   titleEl.append(storagedItem)
+   }
 </script>
