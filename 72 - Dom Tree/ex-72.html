@@ -22,27 +22,11 @@
 
 <script>
 
-/*   let inputsSel2 = document.querySelectorAll('input')         //metodo non funzionante
-  let formEl2 = document.querySelector('form')
-  function add(inputs){
-
-    for(let i = 0; i<inputs.length; i++){
-      const id = inputs[i].id;
-      const value = inputs[i].value;
-      let person = {[id]: value}
-      let jPerson = JSON.stringify(person)
-      let asd = formEl2.setAttribute('data-person', jPerson)
-      console.log(formEl2)
-    }
-  }
-  add(inputsSel2) */
-
-  
   let inputsSel = document.querySelectorAll('input')
   let formEl = document.querySelector('form')
   let person ={}
 
-  inputsSel.forEach((element, i) => (person[inputsSel[i].id] = inputsSel[i].value));
+  inputsSel.forEach((element) => (person[element.id] = element.value));
   console.log(person)
 
   const personString = JSON.stringify(person)
