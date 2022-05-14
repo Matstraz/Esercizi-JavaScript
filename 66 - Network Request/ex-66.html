@@ -17,11 +17,14 @@
       let  liEl = document.createElement('li')
       ulEl.append(liEl)
     }
-    
+   
     for(let i = 0; i<desBodyResponse.length; i++){
       let liElArr = document.querySelectorAll('li')
       liElArr[i].append(desBodyResponse[i].title)
     }
+
+/*     let liElArr = document.querySelectorAll('li');  //Alternativa al ciclo for precedentes
+    liElArr.forEach((element, i) => element= element.append(desBodyResponse[i].title) ); */
   }
 
   fetching()
