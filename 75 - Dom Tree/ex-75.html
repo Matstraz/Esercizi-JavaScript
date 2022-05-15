@@ -69,7 +69,27 @@
     form.prepend(firstNameInput);
 
     form.addEventListener("submit", submitPersonForm);
+
+/*     let loadMessage = function(){                             //con questo codice il messaggio verrà mostrato una volta inviato il form
+      let personLoaded = new CustomEvent('personFormLoaded', {
+        detail:{
+          message: 'Person Form Loaded'
+        }
+      })
+      form.addEventListener('personFormLoaded', e =>
+      console.log(e.detail.message))
+      form.dispatchEvent(personLoaded)
+    }
+    form.addEventListener("submit", loadMessage) */
   }
 
+  let personLoaded = new CustomEvent('personFormLoaded', {
+    detail:{
+      message: 'Person Form Loaded'
+    }
+  });
+  
   window.addEventListener("DOMContentLoaded", initForm);
+  window.addEventListener('personFormLoaded', e => console.log(e.detail.message))
+  window.dispatchEvent(personLoaded)
 </script>
