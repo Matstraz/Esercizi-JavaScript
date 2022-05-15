@@ -21,26 +21,18 @@
 
 <script>
 let inputSel = document.querySelectorAll('input')
+inputSel.forEach(element => console.log(element.previousElementSibling.textContent, element.value));
 
-function stamp(inputs){
+
+/*  function stamp(inputs){                                      //Alternativa utilizzando un ciclo for
   for(let i = 0; i < inputs.length; i++){
-    let labels = inputs[i].previousElementSibling.firstChild.textContent;
+    let labels = inputs[i].previousElementSibling.textContent;
     let values = inputs[i].value
     console.log(`${labels} ${values}`)
   }
 }
 
 stamp(inputSel)
-
-/* 
-function results(select){                                   //Questa alternativa non stampa labels + values ma 
-  for(i=0; i<select.length; i++){                           //ma ids + values, restituendo un risultato sensibilmente
-    console.log(`${select[i].id}: ${select[i].value}`)      //più semplice da ottenere anche se leggermente diverso visivamente
-  }                                                         //(differente da quanto richiesto in consegna).
-}
-results(inputSel) */
-
-
-
+ */
 
 </script>
